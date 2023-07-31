@@ -1,60 +1,5 @@
-import random
-
-word_list = [
-    "guitar",
-    "spirit",
-    "college",
-    "monster",
-    "puzzle",
-    "bicycle",
-    "bottles",
-    "morning",
-    "sunset",
-    "sunrise",
-    "turtles",
-    "chicken",
-    "waffles",
-    "weather",
-    "wizards",
-    "friends",
-    "breathe",
-    "capable",
-    "wonders",
-    "freedom",
-    "rockets",
-    "baskets",
-    "dancing",
-    "circles",
-    "pillows",
-    "flavors",
-    "feather",
-    "rainbow",
-    "smiling",
-    "monster",
-    "whisper",
-    "blossom",
-    "journey",
-    "scratch",
-    "sailing",
-    "silence",
-    "society",
-    "welfare",
-    "enchant",
-    "erasers",
-    "letters",
-    "eclipse",
-    "blazing",
-    "singing",
-    "fishing",
-    "feeling",
-    "freeway",
-    "gateway",
-    "grizzly"
-]
-
-
 def print_current_word():
-    print(f"Complete It:",end='')
+    print(f"Complete It:", end='')
     for j in range(len(selected_word)):
         print(user_word[j], end='')
     print()
@@ -136,8 +81,10 @@ def print_hangman(try_count):
         """)
 
 
-selected_word = random.choice(word_list)
-# selected_word = input()
+while True:
+    selected_word = input("Enter the required word must have length b/w 7 and 10:")
+    if 7 <= len(selected_word) <= 10:
+        break
 tries = 7
 print(f"Required Word is {selected_word}")
 user_word = []
